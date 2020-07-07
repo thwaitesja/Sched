@@ -48,9 +48,10 @@ class Sched():
         form = {x.attrib["name"]: x.attrib["value"] for x in hidden_inputs}
         form['l[password]'] = password
         form['l[username]'] = user
-        code = self.session.post(Login_URL, data=form, allow_redirects=True)
-        if code >= 400:
-            print(f"{code} Error: check your password and username")
+        url = self.session.post(Login_URL, data=form, allow_redirects=True)
+        if url >= Login_URL:
+            print(" Error: Login was not successful check your password and username")
+            quit()
 
     def pull_xlsx(self, filename, url):
         if not os.path.exists(Folder):

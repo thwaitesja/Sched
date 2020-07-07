@@ -1,5 +1,6 @@
 # Pulls any Excel sheet from sched: for mentors, sponsors, or speakers and also can push a spreadsheet to sched called
 # as the second argument or when asked for input
+# YOU MUST FILL OUT THE USERNAME AND PASSWORD
 
 import lxml.html
 import sys
